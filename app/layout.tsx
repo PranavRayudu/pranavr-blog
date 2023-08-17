@@ -1,20 +1,55 @@
 import 'css/tailwind.css'
-import 'pliny/search/algolia.css'
-
-import { Space_Grotesk } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
-import { SearchProvider, SearchConfig } from 'pliny/search'
+import { SearchConfig, SearchProvider } from 'pliny/search'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
+import {
+  Aboreto,
+  Abril_Fatface,
+  Berkshire_Swash,
+  Carter_One,
+  Courgette,
+  DM_Serif_Display,
+  Fugaz_One,
+  Glass_Antiqua,
+  Leckerli_One,
+  Lemon,
+  Libre_Baskerville,
+  Libre_Bodoni,
+  Lilita_One,
+  Lobster,
+  Lobster_Two,
+  Londrina_Solid,
+  Old_Standard_TT,
+  Oleo_Script,
+  Pacifico,
+  Playball,
+  Playfair,
+  Playfair_Display,
+  PT_Sans,
+  Yeseva_One,
+} from 'next/font/google'
+// import localFont from "next/font/local";
 
-const space_grotesk = Space_Grotesk({
+//fugaz, playfair
+// dm_serif_display, lobster
+// Oleo_script
+const old_standard = DM_Serif_Display({
+  weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-space-grotesk',
+  variable: '--font-serif',
+})
+
+const pt_sans = PT_Sans({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans-serif',
 })
 
 export const metadata: Metadata = {
@@ -61,7 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${pt_sans.variable} ${old_standard.variable} font-sans scroll-smooth`}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
@@ -73,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
+      <body className="bg-white text-black antialiased dark:bg-neutral-900 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
