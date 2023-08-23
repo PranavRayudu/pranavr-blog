@@ -8,7 +8,7 @@
 
 .primary-link {
   @apply text-primary-600 hover:text-primary-400 dark:text-primary-500 dark:hover:text-primary-400
-  text-glow-lg-primary-300 hover:text-glow-intense-lg-primary-300;
+  text-glow-lg-primary-400 hover:text-glow-intense-lg-primary-400 dark:text-glow-lg-primary-300 dark:hover:text-glow-intense-lg-primary-300;
 }
 
 .task-list-item::before {

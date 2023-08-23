@@ -67,6 +67,7 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('./plugins/glow'),
+    require('./plugins/text-effects'),
     require('./plugins/raised'),
   ],
 }

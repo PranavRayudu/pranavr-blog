@@ -1,3 +1,5 @@
+import { colorLuminance } from './utils'
+
 const plugin = require('tailwindcss/plugin')
 const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
 
@@ -13,23 +15,6 @@ enum BoxShape {
   CONCAVE,
   CONVEX,
   INSET,
-}
-function colorLuminance(hex: string, lum: number) {
-  // validate hex string
-  hex = String(hex).replace(/[^0-9a-f]/gi, '')
-  if (hex.length < 6) {
-    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]
-  }
-  // convert to decimal and change luminosity
-  let rgb = '#'
-  let c: number
-  for (let i = 0; i < 3; i++) {
-    c = parseInt(hex.substring(i * 2, i * 2 + 2), 16)
-    const c16 = Math.round(Math.min(Math.max(0, c + c * lum), 255)).toString(16)
-    rgb += ('00' + c16).substring(c16.length)
-  }
-
-  return rgb
 }
 
 function generateNeumorphicStyles(
@@ -97,41 +82,24 @@ const sizes = {
   xl3: 64,
 }
 export default plugin(({ matchUtilities, theme }) => {
-  // const light_shadows = Object.fromEntries(
-  //   Object.entries(sizes).map(([sizeName, sizeVal]) => [
-  //     `raised-${sizeName}`,
-  //     (color) => ({ boxShadow: generateNeumorphicStyles(color, LIGHT, sizeVal) }),
-  //   ])
-  // )
-  //
-  // const dark_shadows = Object.fromEntries(
-  //   Object.entries(sizes).map(([sizeName, sizeVal]) => [
-  //     `raised-intense-${sizeName}`,
-  //     (color) => ({ boxShadow: generateNeumorphicStyles(color, DARK, sizeVal) }),
-  //   ])
-  // )
+  const light_shadows = Object.fromEntries(
+    Object.entries(sizes).map(([sizeName, sizeVal]) => [
+      `raised-${sizeName}`,
+      (color: string) => ({ boxShadow: generateNeumorphicStyles(color, LIGHT, sizeVal) }),
+    ])
+  )
+
+  const dark_shadows = Object.fromEntries(
+    Object.entries(sizes).map(([sizeName, sizeVal]) => [
+      `raised-intense-${sizeName}`,
+      (color: string) => ({ boxShadow: generateNeumorphicStyles(color, DARK, sizeVal) }),
+    ])
+  )
 
   matchUtilities(
     {
-      // ...light_shadows,
-      // ...dark_shadows,
-      'raised-sm': (val: string) => ({ boxShadow: generateNeumorphicStyles(val, LIGHT, sizes.sm) }),
-      'raised-md': (val) => ({ boxShadow: generateNeumorphicStyles(val, LIGHT, sizes.md) }),
-      'raised-lg': (val) => ({ boxShadow: generateNeumorphicStyles(val, LIGHT, sizes.lg) }),
-      'raised-xl': (val) => ({ boxShadow: generateNeumorphicStyles(val, LIGHT, sizes.xl) }),
-      'raised-xl2': (val) => ({ boxShadow: generateNeumorphicStyles(val, LIGHT, sizes.xl2) }),
-      'raised-xl3': (val) => ({ boxShadow: generateNeumorphicStyles(val, LIGHT, sizes.xl3) }),
-
-      'raised-intense-sm': (val) => ({ boxShadow: generateNeumorphicStyles(val, DARK, sizes.sm) }),
-      'raised-intense-md': (val) => ({ boxShadow: generateNeumorphicStyles(val, DARK, sizes.md) }),
-      'raised-intense-lg': (val) => ({ boxShadow: generateNeumorphicStyles(val, DARK, sizes.lg) }),
-      'raised-intense-xl': (val) => ({ boxShadow: generateNeumorphicStyles(val, DARK, sizes.xl) }),
-      'raised-intense-xl2': (val) => ({
-        boxShadow: generateNeumorphicStyles(val, DARK, sizes.xl2),
-      }),
-      'raised-intense-xl3': (val) => ({
-        boxShadow: generateNeumorphicStyles(val, DARK, sizes.xl3),
-      }),
+      ...light_shadows,
+      ...dark_shadows,
     },
     {
       values: flattenColorPalette(theme('colors')),
