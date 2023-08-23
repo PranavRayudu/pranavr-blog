@@ -19,7 +19,7 @@ const ThemeSwitch = () => {
       aria-label="Toggle Dark Mode"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className={
-        'raised-sm-gray-200 dark:raised-intense-sm-gray-900 rounded-lg border border-opacity-60 border-gray-300 dark:border-gray-700 p-2 w-10 h-10'
+        'raised-sm-gray-200 dark:raised-intense-sm-gray-900 rounded-lg border border-opacity-60 border-gray-300 dark:border-gray-800 p-2 w-10 h-10'
       }
     >
       <svg
