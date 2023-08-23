@@ -84,10 +84,10 @@ export default function ListLayoutWithTags({
           </h1>
         </div>
         <div className="flex sm:space-x-16">
-          <div className="hidden max-h-screen h-full sm:flex flex-wrap bg-gray-50 dark:bg-gray-900/70 shadow-lg pt-5 dark:shadow-gray-800/40 rounded-3xl min-w-[280px] max-w-[280px]">
+          <div className="hidden max-h-screen h-full sm:flex flex-wrap bg-gray-200 dark:bg-gray-900 pt-5 border border-opacity-60 border-gray-300 dark:border-gray-700 raised-md-gray-200 dark:raised-intense-md-gray-900 rounded-3xl min-w-[280px] max-w-[280px]">
             <div className="py-4 px-6">
               {pathname.startsWith('/blog') ? (
-                <h3 className="text-primary-500 font-bold uppercase">All Posts</h3>
+                <h3 className="font-bold uppercase">All Posts</h3>
               ) : (
                 <Link
                   href={`/blog`}
@@ -128,7 +128,7 @@ export default function ListLayoutWithTags({
                     <article className="space-y-2 flex flex-col xl:space-y-0">
                       <dl>
                         <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="text-base font-medium leading-6 text-gray-600 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                         </dd>
                       </dl>
@@ -143,7 +143,7 @@ export default function ListLayoutWithTags({
                             {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                           </div>
                         </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        <div className="prose max-w-none text-gray-600 dark:text-gray-400">
                           {summary}
                         </div>
                       </div>

@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  @apply bg-yellow-300 text-black;
+}
+
 .primary-link {
-  @apply text-primary-700 hover:text-primary-500 dark:text-primary-500 dark:hover:text-primary-400
+  @apply text-primary-600 hover:text-primary-400 dark:text-primary-500 dark:hover:text-primary-400
   text-glow-lg-primary-300 hover:text-glow-intense-lg-primary-300;
 }
 
