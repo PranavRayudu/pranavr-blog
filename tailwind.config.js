@@ -31,9 +31,9 @@ module.exports = {
               textDecoration: 'none',
               color: theme('colors.primary.600'),
               '&:hover': {
-                color: `${theme('colors.primary.700')}`,
+                color: `${theme('colors.primary.400')}`,
               },
-              code: { color: theme('colors.primary.700') },
+              code: { color: theme('colors.primary.400') },
             },
             'h1,h2,h3': {
               fontFamily: [`var(--font-serif)`],
@@ -67,5 +67,6 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('./plugins/glow'),
+    require('./plugins/raised'),
   ],
 }
