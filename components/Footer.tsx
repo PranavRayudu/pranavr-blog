@@ -1,6 +1,6 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
+import SocialIcon from '@/components/SocialIcon'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
@@ -19,13 +19,38 @@ export default function Footer() {
             icon={faEnvelope}
             title="mail"
             href={`mailto:${siteMetadata.email}`}
-            size={6}
+            className={'w-6 h-6'}
           />
-          <SocialIcon icon={faGithub} title="github" href={siteMetadata.github} size={6} />
-          <SocialIcon icon={faFacebook} title="facebook" href={siteMetadata.facebook} size={6} />
-          <SocialIcon icon={faYoutube} title="youtube" href={siteMetadata.youtube} size={6} />
-          <SocialIcon icon={faLinkedin} title="linkedin" href={siteMetadata.linkedin} size={6} />
-          <SocialIcon icon={faTwitter} title="twitter" href={siteMetadata.twitter} size={6} />
+          <SocialIcon
+            icon={faGithub}
+            title="github"
+            href={siteMetadata.github}
+            className={'w-6 h-6'}
+          />
+          <SocialIcon
+            icon={faFacebook}
+            title="facebook"
+            href={siteMetadata.facebook}
+            className={'w-6 h-6'}
+          />
+          <SocialIcon
+            icon={faYoutube}
+            title="youtube"
+            href={siteMetadata.youtube}
+            className={'w-6 h-6'}
+          />
+          <SocialIcon
+            icon={faLinkedin}
+            title="linkedin"
+            href={siteMetadata.linkedin}
+            className={'w-6 h-6'}
+          />
+          <SocialIcon
+            icon={faTwitter}
+            title="twitter"
+            href={siteMetadata.twitter}
+            className={'w-6 h-6'}
+          />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-600 dark:text-gray-400">
           <div>{siteMetadata.author}</div>

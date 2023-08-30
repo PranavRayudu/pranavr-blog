@@ -70,8 +70,8 @@ function generateNeumorphicStyles(
   return `${firstBoxShadow}, ${secondBoxShadow}`
 }
 
-const DARK = 0.5
-const LIGHT = 0.3
+const DARK = 0.4
+const LIGHT = 0.4
 
 const sizes = {
   sm: 4,
@@ -99,14 +99,30 @@ export default plugin(({ matchUtilities, theme }) => {
   const inset_light_shadows = Object.fromEntries(
     Object.entries(sizes).map(([sizeName, sizeVal]) => [
       `inset-${sizeName}`,
-      (color: string) => ({ boxShadow: generateNeumorphicStyles(color, LIGHT, sizeVal, LightSourceDirection.TOP_LEFT, BoxShape.INSET) }),
+      (color: string) => ({
+        boxShadow: generateNeumorphicStyles(
+          color,
+          LIGHT,
+          sizeVal,
+          LightSourceDirection.TOP_LEFT,
+          BoxShape.INSET
+        ),
+      }),
     ])
   )
 
   const inset_dark_shadows = Object.fromEntries(
     Object.entries(sizes).map(([sizeName, sizeVal]) => [
       `inset-intense-${sizeName}`,
-      (color: string) => ({ boxShadow: generateNeumorphicStyles(color, DARK, sizeVal, LightSourceDirection.TOP_LEFT, BoxShape.INSET) }),
+      (color: string) => ({
+        boxShadow: generateNeumorphicStyles(
+          color,
+          DARK,
+          sizeVal,
+          LightSourceDirection.TOP_LEFT,
+          BoxShape.INSET
+        ),
+      }),
     ])
   )
 

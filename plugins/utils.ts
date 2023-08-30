@@ -41,5 +41,5 @@ export function rgbWithOpacity(value: string, opacity: number) {
 }
 
 export function generateShadow(distance: number, color: string, darkness = -0.1) {
-  return `0px ${distance}px ${colorLuminance(color, darkness)}`
+  return `0px ${distance}px 3px ${colorLuminance(color, darkness)}`
 }

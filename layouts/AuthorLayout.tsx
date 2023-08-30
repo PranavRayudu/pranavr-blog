@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import type { Authors } from 'contentlayer/generated'
-import SocialIcon from '@/components/social-icons'
+import SocialIcon from '@/components/SocialIcon'
 import Image from '@/components/Image'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'

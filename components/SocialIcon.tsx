@@ -5,10 +5,10 @@ type SocialIconProps = {
   icon: IconProp
   title: string | undefined
   href: string | undefined
-  size?: number
+  className?: string
 }
 
-const SocialIcon = ({ icon, title, href, size = 8 }: SocialIconProps) => {
+const SocialIcon = ({ icon, title, href, className = '' }: SocialIconProps) => {
   if (!href || (title === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
     return null
 
@@ -22,7 +22,10 @@ const SocialIcon = ({ icon, title, href, size = 8 }: SocialIconProps) => {
       <FontAwesomeIcon
         icon={icon}
         title={title}
-        className={`fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-${size} w-${size}`}
+        className={`
+        text-primary-500 hover:text-primary-300 raised-glow-md-gray-50 hover:raised-glow-intense-lg-gray-50
+        dark:text-primary-500 dark:hover:text-primary-300 dark:dark-raised-glow-md-primary-500 dark:hover:dark-raised-glow-intense-lg-primary-500 
+        transition h-8 w-8 ${className}`}
       />
     </a>
   )
