@@ -84,7 +84,7 @@ export default function ListLayoutWithTags({
           </h1>
         </div>
         <div className="flex sm:space-x-16">
-          <div className="hidden max-h-screen h-full sm:flex flex-wrap bg-gray-200 dark:bg-gray-900 pt-5 border border-opacity-60 border-gray-300 dark:border-gray-800 raised-md-gray-200 dark:raised-intense-md-gray-900 rounded-3xl min-w-[280px] max-w-[280px]">
+          <div className="hidden max-h-screen h-full sm:flex flex-wrap bg-gray-200 dark:bg-gray-900 pt-5 card rounded-3xl min-w-[280px] max-w-[280px]">
             <div className="py-4 px-6">
               {pathname.startsWith('/blog') ? (
                 <h3 className="font-bold uppercase">All Posts</h3>

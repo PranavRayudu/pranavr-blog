@@ -96,10 +96,26 @@ export default plugin(({ matchUtilities, theme }) => {
     ])
   )
 
+  const inset_light_shadows = Object.fromEntries(
+    Object.entries(sizes).map(([sizeName, sizeVal]) => [
+      `inset-${sizeName}`,
+      (color: string) => ({ boxShadow: generateNeumorphicStyles(color, LIGHT, sizeVal, LightSourceDirection.TOP_LEFT, BoxShape.INSET) }),
+    ])
+  )
+
+  const inset_dark_shadows = Object.fromEntries(
+    Object.entries(sizes).map(([sizeName, sizeVal]) => [
+      `inset-intense-${sizeName}`,
+      (color: string) => ({ boxShadow: generateNeumorphicStyles(color, DARK, sizeVal, LightSourceDirection.TOP_LEFT, BoxShape.INSET) }),
+    ])
+  )
+
   matchUtilities(
     {
       ...light_shadows,
       ...dark_shadows,
+      ...inset_light_shadows,
+      ...inset_dark_shadows,
     },
     {
       values: flattenColorPalette(theme('colors')),

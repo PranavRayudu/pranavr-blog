@@ -7,8 +7,21 @@
 }
 
 .primary-link {
-  @apply text-primary-600 hover:text-primary-400 dark:text-primary-500 dark:hover:text-primary-400
-  text-glow-lg-primary-400 hover:text-glow-intense-lg-primary-400 dark:text-glow-lg-primary-300 dark:hover:text-glow-intense-lg-primary-300;
+  @apply text-primary-600 hover:text-primary-400 dark:text-primary-500 dark:hover:text-primary-400;
+  @apply transition;
+  @apply text-glow-lg-primary-400 hover:text-glow-intense-lg-primary-400;
+  @apply dark:text-glow-lg-primary-300 dark:hover:text-glow-intense-lg-primary-300;
+}
+
+.card {
+  @apply raised-sm-gray-200 dark:raised-intense-sm-gray-900 border border-opacity-60 border-gray-300 dark:border-gray-800;
+}
+
+.btn {
+  @apply card;
+  /*@apply transition;*/
+  @apply hover:raised-md-gray-200 hover:dark:raised-intense-md-gray-900;
+  @apply active:inset-sm-gray-200 active:dark:inset-intense-sm-gray-900
 }
 
 .task-list-item::before {
