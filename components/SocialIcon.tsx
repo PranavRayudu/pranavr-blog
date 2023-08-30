@@ -25,6 +25,7 @@ const SocialIcon = ({ icon, title, href, className = '' }: SocialIconProps) => {
         className={`
         text-gray-500 hover:text-gray-400 raised-glow-md-gray-50 hover:raised-glow-intense-lg-gray-50
         dark:text-primary-500 dark:hover:text-primary-300 dark:dark-raised-glow-md-primary-500 dark:hover:dark-raised-glow-intense-lg-primary-500 
+        hover:-translate-y-0.5
         transition h-6 w-6 ${className}`}
       />
     </a>

@@ -59,7 +59,7 @@ export default function Footer() {
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
         </div>
-        <div className="mb-8 text-sm text-gray-600 dark:text-gray-400">
+        <div className="mb-8 text-sm text-gray-600 dark:text-gray-400 hover:text-secondary-600 dark:hover:text-secondary-400">
           <Link href="https://github.com/PranavRayudu/pranavr-blog">Site Source</Link>
         </div>
       </div>

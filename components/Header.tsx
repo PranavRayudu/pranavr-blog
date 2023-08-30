@@ -22,7 +22,11 @@ const Header = () => {
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hidden text-3xl font-extrabold font-serif sm:block">
                 Big{' '}
-                <div className={'hover:text-primary-500 inline-block hover:scale-y-125 transition'}>
+                <div
+                  className={
+                    ' hover:text-secondary-500 dark:hover:text-secondary-400 inline-block hover:scale-y-125 transition'
+                  }
+                >
                   Oof
                 </div>{' '}
                 Notation
@@ -40,7 +44,7 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className="hidden sm:block font-medium text-gray-900 dark:text-gray-100 hover:text-primary-400 dark:hover:text-primary-400"
+              className="hidden sm:block font-medium text-gray-900 dark:text-gray-100 hover:text-secondary-600 dark:hover:text-secondary-400"
             >
               {link.title}
             </Link>

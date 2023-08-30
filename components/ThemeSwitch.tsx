@@ -20,7 +20,9 @@ const ThemeSwitch = () => {
     <button
       aria-label="Toggle Dark Mode"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className={'btn rounded-lg p-2 w-10 h-10 hover:text-primary-400'}
+      className={
+        'btn rounded-lg p-2 w-10 h-10 hover:text-secondary-600 dark:hover:text-secondary-400'
+      }
     >
       {mounted && theme === 'dark' ? (
         <FontAwesomeIcon icon={faMoon} />

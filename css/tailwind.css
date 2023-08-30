@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::selection {
-  @apply bg-yellow-300 text-black;
+  @apply bg-secondary-300 text-black;
 }
 
 .primary-link {

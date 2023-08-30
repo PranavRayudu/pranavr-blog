@@ -15,7 +15,9 @@ const SearchButton = () => {
     return (
       <SearchButtonWrapper
         aria-label="Search"
-        className={'btn rounded-lg p-2 w-10 h-10 hover:text-primary-400'}
+        className={
+          'btn rounded-lg p-2 w-10 h-10 hover:text-secondary-600 dark:hover:text-secondary-400'
+        }
       >
         <FontAwesomeIcon icon={faMagnifyingGlass} />
       </SearchButtonWrapper>

@@ -22,6 +22,7 @@ module.exports = {
       },
       colors: {
         primary: colors.rose,
+        secondary: colors.yellow,
         gray: colors.stone,
       },
       typography: ({ theme }) => ({
