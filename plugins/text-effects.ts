@@ -3,7 +3,7 @@ const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenCo
 
 import { colorLuminance, rgbWithOpacity } from './utils'
 
-const LIGHT = 0.5
+const LIGHT = 0.3
 const DARK = 0.9
 
 const sizes = {

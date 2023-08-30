@@ -10,6 +10,8 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 interface PaginationProps {
   totalPages: number
@@ -33,15 +35,16 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
       <nav className="flex justify-between">
         {!prevPage && (
           <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
-            Previous
+            <FontAwesomeIcon icon={faChevronLeft} /> Previous
           </button>
         )}
         {prevPage && (
           <Link
+            className={'primary-link'}
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
             rel="prev"
           >
-            Previous
+            <FontAwesomeIcon icon={faChevronLeft} /> Previous
           </Link>
         )}
         <span>
@@ -49,12 +52,12 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
         </span>
         {!nextPage && (
           <button className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
-            Next
+            Next <FontAwesomeIcon icon={faChevronRight} />
           </button>
         )}
         {nextPage && (
-          <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
-            Next
+          <Link className={'primary-link'} href={`/${basePath}/page/${currentPage + 1}`} rel="next">
+            Next <FontAwesomeIcon icon={faChevronRight} />
           </Link>
         )}
       </nav>

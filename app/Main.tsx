@@ -23,7 +23,7 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags } = post
             return (
-              <li key={slug} className="py-12">
+              <li key={slug} className="py-8">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
@@ -49,19 +49,19 @@ export default function Home({ posts }) {
                             ))}
                           </div>
                         </div>
-                        <div className="prose max-w-none text-gray-600 dark:text-gray-400">
-                          {summary}
-                        </div>
+                        {/*<div className="prose max-w-none text-gray-600 dark:text-gray-400">*/}
+                        {/*  {summary}*/}
+                        {/*</div>*/}
                       </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="primary-link"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
+                      {/*<div className="text-base font-medium leading-6">*/}
+                      {/*  <Link*/}
+                      {/*    href={`/blog/${slug}`}*/}
+                      {/*    className="primary-link"*/}
+                      {/*    aria-label={`Read "${title}"`}*/}
+                      {/*  >*/}
+                      {/*    Read more &rarr;*/}
+                      {/*  </Link>*/}
+                      {/*</div>*/}
                     </div>
                   </div>
                 </article>

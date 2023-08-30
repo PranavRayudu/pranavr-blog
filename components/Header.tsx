@@ -14,8 +14,8 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <div
               className="mr-3 rounded-full transition
-              border-black border-2
-]              dark:dark-raised-glow-lg-yellow-500 dark:hover:dark-raised-glow-intense-lg-yellow-500"
+              border-black border-2 dark:border-0
+              dark:dark-raised-glow-lg-yellow-500 dark:hover:dark-raised-glow-intense-lg-yellow-500"
             >
               <Logo className="h-16 w-16" viewBox={'0 0 512 512'} />
             </div>
