@@ -14,22 +14,14 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <div
               className="mr-3 rounded-full transition
-              border-black border-2 dark:border-0
+              border-gray-950 border-2 dark:border-transparent
               dark:dark-raised-glow-lg-yellow-500 dark:hover:dark-raised-glow-intense-lg-yellow-500"
             >
               <Logo className="h-16 w-16" viewBox={'0 0 512 512'} />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hidden text-3xl font-extrabold font-serif sm:block">
-                Big{' '}
-                <div
-                  className={
-                    ' hover:text-secondary-500 dark:hover:text-secondary-400 inline-block hover:scale-y-125 transition'
-                  }
-                >
-                  Oof
-                </div>{' '}
-                Notation
+                {siteMetadata.headerTitle}
               </div>
             ) : (
               siteMetadata.headerTitle

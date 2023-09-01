@@ -70,8 +70,8 @@ function generateNeumorphicStyles(
   return `${firstBoxShadow}, ${secondBoxShadow}`
 }
 
-const DARK = 0.4
-const LIGHT = 0.4
+const DARK = 0.9
+const LIGHT = 0.5
 
 const sizes = {
   sm: 4,
