@@ -6,7 +6,7 @@ const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenCo
 
 export default plugin(({ matchUtilities, theme }) => {
   const weak_shadow_strength = -0.2
-  const strong_shadow_strength = -0.4
+  const strong_shadow_strength = -0.6
 
   const glow_weak_strength = 0.4
   const shadow_weak_color = theme('colors.gray.200')

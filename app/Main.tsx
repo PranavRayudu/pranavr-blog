@@ -20,7 +20,7 @@ export default function Home({ posts, projects }) {
         >
           Hello, my name is <br />
           <span
-            className={'text-6xl leading-12 sm:text-7xl sm:leading-14 md:text-8xl md:leading-14'}
+            className={'text-6xl leading-12 sm:text-7xl sm:leading-14 md:text-7xl md:leading-14'}
           >
             {siteMetadata.author}
           </span>
