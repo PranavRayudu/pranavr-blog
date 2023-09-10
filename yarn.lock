@@ -8376,6 +8376,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mitt@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "mitt@npm:3.0.1"
+  checksum: b55a489ac9c2949ab166b7f060601d3b6d893a852515ae9eca4e11df01c013876df777ea109317622b5c1c60e8aae252558e33c8c94e14124db38f64a39614b1
+  languageName: node
+  linkType: hard
+
 "mkdirp@npm:^1.0.3, mkdirp@npm:^1.0.4":
   version: 1.0.4
   resolution: "mkdirp@npm:1.0.4"
@@ -8484,6 +8491,19 @@ __metadata:
     react: "*"
     react-dom: "*"
   checksum: ebc248b956138e73436c4ed0a0f0a877a0a48a33156db577029b8b8469e48b5c777d61abf2baeb75953378febea74e067a4869ff90b4a3e94fce123289b862ba
+  languageName: node
+  linkType: hard
+
+"next-usequerystate@npm:1.8.0-beta.6":
+  version: 1.8.0-beta.6
+  resolution: "next-usequerystate@npm:1.8.0-beta.6"
+  dependencies:
+    mitt: ^3.0.1
+  peerDependencies:
+    next: ^13.4
+    react: "*"
+    react-dom: "*"
+  checksum: 2a475d6964414e9c42d4c5babb6b2e732acd9afb3c9eefd799a5e7cd6a13368293e17d18acc99ff2197ce7a14a13d23ed6d619fd18c1cd30362eb139b0e63c7b
   languageName: node
   linkType: hard
 
@@ -10859,6 +10879,7 @@ __metadata:
     next: 13.4.12
     next-contentlayer: 0.3.4
     next-themes: ^0.2.1
+    next-usequerystate: 1.8.0-beta.6
     pliny: 0.1.1
     postcss: ^8.4.24
     prettier: ^3.0.0
