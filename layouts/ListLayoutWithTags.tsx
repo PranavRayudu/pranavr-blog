@@ -168,6 +168,9 @@ export default function ListLayoutWithTags({ posts }: ListLayoutProps) {
               {/*<h3 className="font-bold uppercase">Tags</h3>*/}
               <div className="space-y-2 pb-4 md:space-y-5">
                 <div className="relative max-w-lg">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-gray-500 dark:text-gray-500">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                  </div>
                   <label>
                     <span className="sr-only">Search articles</span>
                     <input
@@ -175,7 +178,7 @@ export default function ListLayoutWithTags({ posts }: ListLayoutProps) {
                       type="text"
                       onChange={(e) => setSearch(e.target.value)}
                       placeholder="Search articles"
-                      className="block w-full rounded-3xl border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 dark:focus:inset-sm-gray-900 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+                      className="block w-full rounded-3xl border border-gray-300 bg-white px-4 py-2 pl-10 text-gray-900 focus:border-primary-500 dark:focus:inset-sm-gray-900 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
                       value={searchTerm || ''}
                     />
                   </label>
