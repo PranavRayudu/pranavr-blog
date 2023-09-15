@@ -9,7 +9,7 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import tagData from 'app/tag-data.json'
+import tagData from 'public/tag-data.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import Chip from '@/components/Chip'
@@ -163,8 +163,8 @@ export default function ListLayoutWithTags({ posts }: ListLayoutProps) {
     <>
       <div>
         <div className="flex space-x-0 md:space-x-8 lg:space-x-16 flex-col md:flex-row">
-          <div className="max-h-screen h-full sm:flex flex-wrap py-5 card rounded-3xl min-w-[280px] md:max-w-[280px]">
-            <div className="py-4 px-6">
+          <div className="max-h-screen h-full sm:flex flex-wrap py-6 card rounded-3xl min-w-[280px] md:max-w-[280px]">
+            <div className="px-6">
               {/*<h3 className="font-bold uppercase">Tags</h3>*/}
               <div className="space-y-2 pb-4 md:space-y-5">
                 <div className="relative max-w-lg">
@@ -185,7 +185,7 @@ export default function ListLayoutWithTags({ posts }: ListLayoutProps) {
                 </div>
               </div>
 
-              <ul className={'space-y-4 space-x-2 -ml-2'}>
+              <ul className={'space-y-4 space-x-2 -ml-2 -mt-2'}>
                 {allTagsSorted.map((t) => {
                   const selected = tags.includes(t)
                   const disabled = !(t in tagCounts)
