@@ -71,7 +71,7 @@ function generateNeumorphicStyles(
 }
 
 const DARK = 0.9
-const LIGHT = 0.5
+const LIGHT = 0.1
 
 const sizes = {
   sm: 4,

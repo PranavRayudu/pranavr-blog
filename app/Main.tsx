@@ -10,7 +10,7 @@ const MAX_PROJECT_DISPLAY = 3
 
 export default function Home({ posts, projects }) {
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-700 space-y-16">
+    <div className="divide-gray-300 dark:divide-gray-700 space-y-16">
       <div className={'mt-12'}>
         <h1
           className={

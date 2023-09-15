@@ -24,7 +24,7 @@ const Chip = ({ text, onClick, highlight, disabled }: Props) => {
   return (
     <button
       onClick={onClick}
-      className={`whitespace-nowrap text-black rounded-full px-2 py-0.5 block transition-transform hover:-translate-y-0.5 focus:!drop-shadow-none focus:translate-y-0 ${colors}`}
+      className={`whitespace-nowrap text-black rounded-full px-2 py-0.5 block transition-transform hover:-translate-y-0.5 active:!drop-shadow-none focus:translate-y-0 ${colors}`}
     >
       {text}
     </button>

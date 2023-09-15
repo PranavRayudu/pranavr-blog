@@ -22,6 +22,7 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
 import siteMetadata from './data/siteMetadata'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
+import { Pluggable } from 'unified'
 
 const root = process.cwd()
 
@@ -59,7 +60,7 @@ function createTagCount(allBlogs) {
       })
     }
   })
-  writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
+  writeFileSync('public/tag-data.json', JSON.stringify(tagCount))
 }
 
 function createSearchIndex(allBlogs) {
@@ -129,6 +130,7 @@ export const Authors = defineDocumentType(() => ({
   computedFields,
 }))
 
+// @ts-ignore
 export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Blog, Authors],
@@ -148,7 +150,7 @@ export default makeSource({
       rehypeKatex,
       [rehypeCitation, { path: path.join(root, 'data') }],
       [rehypePrismPlus, { defaultLanguage: 'js', ignoreMissing: true }],
-      rehypePresetMinify,
+      rehypePresetMinify as Pluggable<never[]>,
     ],
   },
   onSuccess: async (importData) => {
