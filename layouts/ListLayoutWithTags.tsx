@@ -178,7 +178,7 @@ export default function ListLayoutWithTags({ posts }: ListLayoutProps) {
                       type="text"
                       onChange={(e) => setSearch(e.target.value)}
                       placeholder="Search articles"
-                      className="block w-full rounded-3xl border border-gray-300 bg-white px-4 py-2 pl-10 text-gray-900 focus:border-primary-500 dark:focus:inset-sm-gray-900 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+                      className="block w-full rounded-3xl border border-gray-300 bg-gray-100 px-4 py-2 pl-10 text-gray-900 focus:border-primary-500 dark:focus:inset-sm-gray-900 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
                       value={searchTerm || ''}
                     />
                   </label>
