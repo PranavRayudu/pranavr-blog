@@ -61,6 +61,8 @@ module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
+    // see https://stackoverflow.com/questions/64989575/how-to-load-libraries-which-export-typescript-in-next-js/64990954#64990954
+    transpilePackages: ['pliny'],
     output: 'standalone',
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
